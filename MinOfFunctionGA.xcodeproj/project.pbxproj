@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A2E51A11C88846100428125 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E51A01C88846100428125 /* GraphViewController.swift */; };
+		7A2E51A31C88847A00428125 /* GenesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E51A21C88847A00428125 /* GenesViewController.swift */; };
 		7A5F29C41C873086009F6714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F29C31C873086009F6714 /* AppDelegate.swift */; };
 		7A5F29C91C873086009F6714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5F29C71C873086009F6714 /* Main.storyboard */; };
 		7A5F29CB1C873086009F6714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5F29CA1C873086009F6714 /* Assets.xcassets */; };
@@ -14,7 +16,6 @@
 		7A5F29D91C873087009F6714 /* MinOfFunctionGATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F29D81C873087009F6714 /* MinOfFunctionGATests.swift */; };
 		7A5F29E41C873087009F6714 /* MinOfFunctionGAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F29E31C873087009F6714 /* MinOfFunctionGAUITests.swift */; };
 		7A5F29F21C878DF9009F6714 /* UserInterfaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F29F11C878DF9009F6714 /* UserInterfaceViewController.swift */; };
-		7A5F29F41C878E21009F6714 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F29F31C878E21009F6714 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A2E51A01C88846100428125 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		7A2E51A21C88847A00428125 /* GenesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenesViewController.swift; sourceTree = "<group>"; };
 		7A5F29C01C873086009F6714 /* MinOfFunctionGA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinOfFunctionGA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5F29C31C873086009F6714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A5F29C81C873086009F6714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +51,6 @@
 		7A5F29E31C873087009F6714 /* MinOfFunctionGAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinOfFunctionGAUITests.swift; sourceTree = "<group>"; };
 		7A5F29E51C873087009F6714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A5F29F11C878DF9009F6714 /* UserInterfaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterfaceViewController.swift; sourceTree = "<group>"; };
-		7A5F29F31C878E21009F6714 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A2E519F1C88837C00428125 /* NotImportantFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7A5F29C31C873086009F6714 /* AppDelegate.swift */,
+				7A5F29CA1C873086009F6714 /* Assets.xcassets */,
+				7A5F29CC1C873086009F6714 /* LaunchScreen.storyboard */,
+				7A5F29CF1C873086009F6714 /* Info.plist */,
+			);
+			name = NotImportantFiles;
+			sourceTree = "<group>";
+		};
 		7A5F29B71C873086009F6714 = {
 			isa = PBXGroup;
 			children = (
@@ -100,12 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				7A5F29F11C878DF9009F6714 /* UserInterfaceViewController.swift */,
-				7A5F29F31C878E21009F6714 /* DetailViewController.swift */,
-				7A5F29C31C873086009F6714 /* AppDelegate.swift */,
+				7A2E51A21C88847A00428125 /* GenesViewController.swift */,
+				7A2E51A01C88846100428125 /* GraphViewController.swift */,
 				7A5F29C71C873086009F6714 /* Main.storyboard */,
-				7A5F29CA1C873086009F6714 /* Assets.xcassets */,
-				7A5F29CC1C873086009F6714 /* LaunchScreen.storyboard */,
-				7A5F29CF1C873086009F6714 /* Info.plist */,
+				7A2E519F1C88837C00428125 /* NotImportantFiles */,
 			);
 			path = MinOfFunctionGA;
 			sourceTree = "<group>";
@@ -259,9 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A5F29F41C878E21009F6714 /* DetailViewController.swift in Sources */,
+				7A2E51A11C88846100428125 /* GraphViewController.swift in Sources */,
 				7A5F29F21C878DF9009F6714 /* UserInterfaceViewController.swift in Sources */,
 				7A5F29C41C873086009F6714 /* AppDelegate.swift in Sources */,
+				7A2E51A31C88847A00428125 /* GenesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +498,7 @@
 				7A5F29EA1C873087009F6714 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A5F29EB1C873087009F6714 /* Build configuration list for PBXNativeTarget "MinOfFunctionGATests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +507,7 @@
 				7A5F29ED1C873087009F6714 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A5F29EE1C873087009F6714 /* Build configuration list for PBXNativeTarget "MinOfFunctionGAUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +516,7 @@
 				7A5F29F01C873087009F6714 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

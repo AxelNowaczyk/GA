@@ -1,14 +1,14 @@
 //
-//  DetailViewController.swift
+//  GraphViewController.swift
 //  MinOfFunctionGA
 //
-//  Created by Axel Nowaczyk on 02.03.2016.
+//  Created by Axel Nowaczyk on 03.03.2016.
 //  Copyright © 2016 Axel Nowaczyk. All rights reserved.
 //
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class GraphViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

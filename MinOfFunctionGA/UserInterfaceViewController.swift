@@ -31,12 +31,14 @@ class UserInterfaceViewController: UIViewController {
             switch identifier{
                 
             case Seques.ShowSimpleFunction:
-                if let vc = segue.destinationViewController as? DetailViewController{
-                        print("Switch view")
+                print("Switch ShowSimpleFunction")
+                if let vc = segue.destinationViewController as? GenesViewController{
+                    
                 }
             case Seques.ShowComplexFunction:
-                if let vc = segue.destinationViewController as? DetailViewController{
-                    print("Switch view")
+                print("Switch ShowComplexFunction")
+                if let vc = segue.destinationViewController as? GenesViewController{
+                    
                 }
             default: break
             }
