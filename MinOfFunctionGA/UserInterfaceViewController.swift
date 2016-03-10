@@ -10,9 +10,13 @@ import UIKit
 
 class UserInterfaceViewController: UIViewController {
 
+    var simpleFunChrom: SimpleFunctionChromosome = SimpleFunctionChromosome(number: -5)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(simpleFunChrom.fitness)
+        simpleFunChrom = SimpleFunctionChromosome(number: 0)
+        print(simpleFunChrom.fitness)
         // Do any additional setup after loading the view.
     }
 
