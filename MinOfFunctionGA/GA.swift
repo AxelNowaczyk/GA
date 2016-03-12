@@ -20,7 +20,7 @@ protocol GA: CustomStringConvertible{
 class SimpleFunctionGA: GA {
     private struct Numbers{
         static let maxGeneration = 30
-        static let PopSize = 100
+        static let PopSize = 30
         static let crossProb = 0.8
         static let mutProb = 0.1
     }

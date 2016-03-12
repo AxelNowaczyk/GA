@@ -41,19 +41,22 @@
             <objects>
                 <viewController id="WDx-d2-FxX" customClass="GraphViewController" customModule="MinOfFunctionGA" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ckx-Mh-sBv"/>
-                        <viewControllerLayoutGuide type="bottom" id="OOg-7b-r7H"/>
+                        <viewControllerLayoutGuide type="top" id="jCj-kJ-T6x"/>
+                        <viewControllerLayoutGuide type="bottom" id="7AF-6R-xgZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Wop-uZ-mhQ">
+                    <view key="view" contentMode="scaleToFill" id="ytn-NX-Lzk" customClass="LineChartView" customModule="Charts">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graph" id="fe0-hk-XD5"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="ytn-NX-Lzk" id="ZQG-jq-JFa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ag-JG-1Ie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1349" y="2101"/>
+            <point key="canvasLocation" x="1381" y="2133"/>
         </scene>
         <!--Values-->
         <scene sceneID="382-Xs-ffv">

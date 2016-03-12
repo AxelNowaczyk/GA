@@ -23,7 +23,7 @@ protocol Chromosome {
 class SimpleFunctionChromosome: Chromosome, Comparable, CustomStringConvertible {
     var representation: [Gene] = [Gene]()
     
-    private struct Numbers{
+    struct Numbers{
         static let Accuracy: Double = 100
         static let ChromeSize = 10//how many genes is in chromosome discounting sign
         struct Range {
@@ -107,9 +107,12 @@ class SimpleFunctionChromosome: Chromosome, Comparable, CustomStringConvertible 
         }
         return Int(strtoul(stringRep, nil, 2))
     }
+    static func funcValAt(point: Double) -> Double{
+        return pow(point, 2) + 2*pow((point+5), 4)
+    }
     var fitness : Double?{
         if let X = x {
-            return pow(X, 2) + 2*pow((X+5), 4)
+            return SimpleFunctionChromosome.funcValAt(X)
         }
         return nil
     }

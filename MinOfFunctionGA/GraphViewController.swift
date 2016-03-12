@@ -7,20 +7,54 @@
 //
 
 import UIKit
+import Charts
 
 class GraphViewController: UIViewController {
 
+    @IBOutlet weak var lineChartView: LineChartView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        var x = [String]()
+        var y = [Double]()
+        let step = 0.1
+        for var index = SimpleFunctionChromosome.Numbers.Range.Min;
+            index<SimpleFunctionChromosome.Numbers.Range.Max;index+=step{
+                x.append("\(index.value)")
+                y.append(SimpleFunctionChromosome.funcValAt(index))
+        }
+        setChart(x, values: y)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    func setChart(dataPoints: [String], values: [Double]) {
+        
+        var dataEntries: [ChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+            dataEntries.append(dataEntry)
+        }
+        
+        var colors: [UIColor] = []
+        
+        for _ in 0..<dataPoints.count {
+            let red = Double(arc4random_uniform(256))
+            let green = Double(arc4random_uniform(256))
+            let blue = Double(arc4random_uniform(256))
+            
+            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+            colors.append(color)
+        }
+        
+        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "")
+        let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
+        lineChartView.data = lineChartData
+        
+    }
 
     /*
     // MARK: - Navigation
