@@ -6,35 +6,39 @@
 //  Copyright © 2016 Axel Nowaczyk. All rights reserved.
 //
 
+
+/*
+https://www.youtube.com/watch?v=I2heTejQP58&list=PLea0WJq13cnARQILcbHUPINYLy1lOSmjH
+
+*/
+
+
 import Foundation
 
 protocol GA: CustomStringConvertible{
     var description: String{ get }
-    func crossoverChrom(firstBef: Chromosome,secondBef: Chromosome) -> (Chromosome,Chromosome)
     func crossover()
-    func mutateChrom(element: Chromosome) -> Chromosome
     func mutate()
-    func initialize()
+    init()
 }
 
 class SimpleFunctionGA: GA {
     private struct Numbers{
-        static let maxGeneration = 30
-        static let PopSize = 30
-        static let crossProb = 0.8
-        static let mutProb = 0.1
+        static let PopSize = 100
+        static let crossProb = 0.75
+        static let mutProb = 0.15
     }
     var population = [SimpleFunctionChromosome]()
     private var randomPercent: Double{
         return Double(arc4random_uniform(100))/100
     }
     
-    func crossoverChrom(firstBef: Chromosome,secondBef: Chromosome) -> (Chromosome,Chromosome){
+    private func crossoverChrom(firstBef: Chromosome,secondBef: Chromosome) -> (Chromosome,Chromosome){
         
         var better: SimpleFunctionChromosome
         var worse: SimpleFunctionChromosome
         
-        if firstBef.fitness > secondBef.fitness{
+        if firstBef.fitness < secondBef.fitness{
             worse = firstBef as! SimpleFunctionChromosome
             better = secondBef as! SimpleFunctionChromosome
         } else {
@@ -51,32 +55,49 @@ class SimpleFunctionGA: GA {
         var currentPop = population
         var futurePop = [SimpleFunctionChromosome]()
         while(!currentPop.isEmpty){
-            let randIndex1 = Int(arc4random_uniform(UInt32(currentPop.count)))
-            let randIndex2 = Int(arc4random_uniform(UInt32(currentPop.count)))
+            let randIndex1 = ruletteWheelSelection(currentPop)
+            let randIndex2 = ruletteWheelSelection(currentPop)
+
             if randIndex1 != randIndex2 {
+                futurePop.append(SimpleFunctionChromosome(representation: currentPop[randIndex1!].representation))
+                futurePop.append(SimpleFunctionChromosome(representation: currentPop[randIndex2!].representation))
                 if randomPercent<Numbers.crossProb{
-                    let (better,worse) = crossoverChrom(currentPop[randIndex1], secondBef: currentPop[randIndex2])
+                    let (better,worse) = crossoverChrom(currentPop[randIndex1!], secondBef: currentPop[randIndex2!])
                     futurePop.append(better as! SimpleFunctionChromosome)
                     futurePop.append(worse as! SimpleFunctionChromosome)
-                } else {
-                    futurePop.append(currentPop[randIndex1])
-                    futurePop.append(currentPop[randIndex2])
                 }
                 if randIndex1 > randIndex2 {
-                    currentPop.removeAtIndex(randIndex1)
-                    currentPop.removeAtIndex(randIndex2)
+                    currentPop.removeAtIndex(randIndex1!)
+                    currentPop.removeAtIndex(randIndex2!)
                 } else {
-                    currentPop.removeAtIndex(randIndex2)
-                    currentPop.removeAtIndex(randIndex1)
+                    currentPop.removeAtIndex(randIndex2!)
+                    currentPop.removeAtIndex(randIndex1!)
                 }
             } else if currentPop.count == 1{
                 futurePop.append(currentPop[0])
             }
+            
         }
-        population = futurePop.sort()
+        futurePop = futurePop.sort().reverse()
+        futurePop.removeRange(Numbers.PopSize..<futurePop.count) // select best after crossover
+        population = futurePop
     }
-    
-    func mutateChrom(element: Chromosome) -> Chromosome{
+    func ruletteWheelSelection(population: [SimpleFunctionChromosome]) -> Int?{
+        var sum = 0
+        for i in population{
+            sum += Int(i.fitness!)
+        }
+        let rand = Int(arc4random_uniform(UInt32(sum)))
+        sum = 0
+        for i in 0..<population.count{
+            sum += Int(population[i].fitness!)
+            if sum > rand {
+                return i
+            }
+        }
+        return nil
+    }
+    private func mutateChrom(element: Chromosome) -> Chromosome{
         var representation = [Bool]()
         for bit in element.representation{
             if(randomPercent<Numbers.mutProb){
@@ -87,7 +108,7 @@ class SimpleFunctionGA: GA {
         }
         return SimpleFunctionChromosome(representation: representation)
     }
-    func mutate(){//dont mutate best
+    func mutate(){
         var mutatedPopulation = [SimpleFunctionChromosome]()
         var addedFirstElement = false// find out better way to do this
         for chrom in population{
@@ -100,7 +121,7 @@ class SimpleFunctionGA: GA {
         }
         population = mutatedPopulation
     }
-    func initialize(){
+    required init(){
         var newElement = SimpleFunctionChromosome()
         for _ in 0..<Numbers.PopSize{
             while population.contains(newElement){
@@ -108,21 +129,16 @@ class SimpleFunctionGA: GA {
             }
             population.append(newElement)
         }
-        population = population.sort()
+        population = population.sort().reverse()
     }
-    static func doGenerations(numberOfGene: Int){
-        let sfGA = SimpleFunctionGA()
-        sfGA.initialize()
-        print(sfGA)
-        for index in 0..<numberOfGene{
-            sfGA.crossover()
-            sfGA.mutate()
-            sfGA.population.sortInPlace()
-            print("\n Next Generation \(index+1) \n")
-            print(sfGA)
+    func doGenerations(numberOfGene: Int){
+        for _ in 0..<numberOfGene{
+            self.crossover()
+            self.mutate()
+            self.population = population.sort().reverse()
         }
     }
-    static func doGeneration(){
+    func doGeneration(){
         doGenerations(1)
     }
     var description: String{

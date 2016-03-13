@@ -26,6 +26,7 @@ class SimpleFunctionChromosome: Chromosome, Comparable, CustomStringConvertible 
     struct Numbers{
         static let Accuracy: Double = 100
         static let ChromeSize = 10//how many genes is in chromosome discounting sign
+        static let MaxVal: Double = 200000
         struct Range {
             static let Max: Double = 10
             static let Min: Double = -10
@@ -110,9 +111,9 @@ class SimpleFunctionChromosome: Chromosome, Comparable, CustomStringConvertible 
     static func funcValAt(point: Double) -> Double{
         return pow(point, 2) + 2*pow((point+5), 4)
     }
-    var fitness : Double?{
+    var fitness : Double?{ // max fitness for -4 is 7.4991
         if let X = x {
-            return SimpleFunctionChromosome.funcValAt(X)
+            return (150000-SimpleFunctionChromosome.funcValAt(X))/20000
         }
         return nil
     }

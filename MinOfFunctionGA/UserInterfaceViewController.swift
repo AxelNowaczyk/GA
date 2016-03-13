@@ -12,9 +12,6 @@ class UserInterfaceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        SimpleFunctionGA.doGenerations(30)
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,14 +30,14 @@ class UserInterfaceViewController: UIViewController {
                 
             case Seques.ShowSimpleFunction:
                 print("Switch ShowSimpleFunction")
-                if let vc = segue.destinationViewController as? GenesViewController{
-                    
-                }
+//                if let vc = segue.destinationViewController as? GenerationsViewController{
+//                    
+//                }
             case Seques.ShowComplexFunction:
                 print("Switch ShowComplexFunction")
-                if let vc = segue.destinationViewController as? GenesViewController{
-                    
-                }
+//                if let vc = segue.destinationViewController as? GenerationsViewController{
+//                    
+//                }
             default: break
             }
         }

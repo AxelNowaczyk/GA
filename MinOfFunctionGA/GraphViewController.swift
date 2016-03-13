@@ -15,12 +15,12 @@ class GraphViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var x = [String]()
+        var x = [Double]()
         var y = [Double]()
-        let step = 0.1
+        let step = 0.01
         for var index = SimpleFunctionChromosome.Numbers.Range.Min;
             index<SimpleFunctionChromosome.Numbers.Range.Max;index+=step{
-                x.append("\(index.value)")
+                x.append(index)
                 y.append(SimpleFunctionChromosome.funcValAt(index))
         }
         setChart(x, values: y)
@@ -30,7 +30,7 @@ class GraphViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func setChart(dataPoints: [String], values: [Double]) {
+    func setChart(dataPoints: [Double], values: [Double]) {
         
         var dataEntries: [ChartDataEntry] = []
         
@@ -38,18 +38,6 @@ class GraphViewController: UIViewController {
             let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
             dataEntries.append(dataEntry)
         }
-        
-        var colors: [UIColor] = []
-        
-        for _ in 0..<dataPoints.count {
-            let red = Double(arc4random_uniform(256))
-            let green = Double(arc4random_uniform(256))
-            let blue = Double(arc4random_uniform(256))
-            
-            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-            colors.append(color)
-        }
-        
         let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "")
         let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
         lineChartView.data = lineChartData
