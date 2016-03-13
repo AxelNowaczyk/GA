@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7A2E51A11C88846100428125 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E51A01C88846100428125 /* GraphViewController.swift */; };
 		7A2E51A31C88847A00428125 /* GenerationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E51A21C88847A00428125 /* GenerationsViewController.swift */; };
+		7A3451FA1C95DABF00AD6C80 /* AnalizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3451F91C95DABF00AD6C80 /* AnalizeViewController.swift */; };
 		7A584D1C1C9202C50059302F /* GA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A584D1B1C9202C50059302F /* GA.swift */; };
 		7A5F29C41C873086009F6714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F29C31C873086009F6714 /* AppDelegate.swift */; };
 		7A5F29C91C873086009F6714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5F29C71C873086009F6714 /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		7A2E51A01C88846100428125 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		7A2E51A21C88847A00428125 /* GenerationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsViewController.swift; sourceTree = "<group>"; };
+		7A3451F91C95DABF00AD6C80 /* AnalizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalizeViewController.swift; sourceTree = "<group>"; };
 		7A584D1B1C9202C50059302F /* GA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GA.swift; sourceTree = "<group>"; };
 		7A5F29C01C873086009F6714 /* MinOfFunctionGA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinOfFunctionGA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5F29C31C873086009F6714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				7A2E51A21C88847A00428125 /* GenerationsViewController.swift */,
 				7A2E51A01C88846100428125 /* GraphViewController.swift */,
 				7A5F29C71C873086009F6714 /* Main.storyboard */,
+				7A3451F91C95DABF00AD6C80 /* AnalizeViewController.swift */,
 				7A864BB61C8F404F00B73B2D /* Classes */,
 				7A2E519F1C88837C00428125 /* NotImportantFiles */,
 			);
@@ -370,6 +373,7 @@
 				7A5F29C41C873086009F6714 /* AppDelegate.swift in Sources */,
 				7A2E51A31C88847A00428125 /* GenerationsViewController.swift in Sources */,
 				7A584D1C1C9202C50059302F /* GA.swift in Sources */,
+				7A3451FA1C95DABF00AD6C80 /* AnalizeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,7 @@ protocol GA: CustomStringConvertible{
 
 class SimpleFunctionGA: GA {
     private struct Numbers{
-        static let PopSize = 100
+        static let PopSize = 10
         static let crossProb = 0.75
         static let mutProb = 0.15
     }
@@ -110,14 +110,9 @@ class SimpleFunctionGA: GA {
     }
     func mutate(){
         var mutatedPopulation = [SimpleFunctionChromosome]()
-        var addedFirstElement = false// find out better way to do this
         for chrom in population{
-            if !addedFirstElement{
-                mutatedPopulation.append(chrom)
-                addedFirstElement = true
-            } else{
-                mutatedPopulation.append(mutateChrom(chrom) as! SimpleFunctionChromosome)
-            }
+            mutatedPopulation.append(mutateChrom(chrom) as! SimpleFunctionChromosome)
+            
         }
         population = mutatedPopulation
     }

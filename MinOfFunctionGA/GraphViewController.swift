@@ -15,6 +15,8 @@ class GraphViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController!.navigationBar.translucent = false;
+        
         var x = [Double]()
         var y = [Double]()
         let step = 0.01
@@ -38,8 +40,9 @@ class GraphViewController: UIViewController {
             let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
             dataEntries.append(dataEntry)
         }
-        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "")
-        let lineChartData = LineChartData(xVals: dataPoints, dataSet: lineChartDataSet)
+        let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Function")
+        let lineChartData = LineChartData(xVals: dataPoints.map{"\(round($0*100)/100)"}, dataSet: lineChartDataSet)
+        lineChartDataSet.circleRadius = 0
         lineChartView.data = lineChartData
         
     }
