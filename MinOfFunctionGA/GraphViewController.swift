@@ -43,18 +43,8 @@ class GraphViewController: UIViewController {
         let lineChartDataSet = LineChartDataSet(yVals: dataEntries, label: "Function")
         let lineChartData = LineChartData(xVals: dataPoints.map{"\(round($0*100)/100)"}, dataSet: lineChartDataSet)
         lineChartDataSet.circleRadius = 0
+        lineChartDataSet.setColor(UIColor.brownColor())
         lineChartView.data = lineChartData
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
