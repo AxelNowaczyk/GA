@@ -6,7 +6,6 @@
 //  Copyright © 2016 Axel Nowaczyk. All rights reserved.
 //
 
-
 import UIKit
 import Charts
 

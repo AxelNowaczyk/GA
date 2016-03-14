@@ -10,7 +10,6 @@
 		7A2E51A11C88846100428125 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E51A01C88846100428125 /* GraphViewController.swift */; };
 		7A2E51A31C88847A00428125 /* GenerationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E51A21C88847A00428125 /* GenerationsViewController.swift */; };
 		7A3451FA1C95DABF00AD6C80 /* AnalizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3451F91C95DABF00AD6C80 /* AnalizeViewController.swift */; };
-		7A3452011C96EC9B00AD6C80 /* CompareToBForceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3452001C96EC9B00AD6C80 /* CompareToBForceViewController.swift */; };
 		7A3452071C96F00000AD6C80 /* BForce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3452061C96F00000AD6C80 /* BForce.swift */; };
 		7A34520A1C9739B200AD6C80 /* GenerationsCViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3452091C9739B200AD6C80 /* GenerationsCViewContoller.swift */; };
 		7A34520D1C9743FC00AD6C80 /* AnalizeCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34520C1C9743FC00AD6C80 /* AnalizeCViewController.swift */; };
@@ -75,7 +74,6 @@
 		7A2E51A01C88846100428125 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		7A2E51A21C88847A00428125 /* GenerationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsViewController.swift; sourceTree = "<group>"; };
 		7A3451F91C95DABF00AD6C80 /* AnalizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalizeViewController.swift; sourceTree = "<group>"; };
-		7A3452001C96EC9B00AD6C80 /* CompareToBForceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareToBForceViewController.swift; sourceTree = "<group>"; };
 		7A3452061C96F00000AD6C80 /* BForce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BForce.swift; sourceTree = "<group>"; };
 		7A3452091C9739B200AD6C80 /* GenerationsCViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerationsCViewContoller.swift; sourceTree = "<group>"; };
 		7A34520C1C9743FC00AD6C80 /* AnalizeCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalizeCViewController.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 			children = (
 				7A2E51A21C88847A00428125 /* GenerationsViewController.swift */,
 				7A2E51A01C88846100428125 /* GraphViewController.swift */,
-				7A3452001C96EC9B00AD6C80 /* CompareToBForceViewController.swift */,
 				7A3451F91C95DABF00AD6C80 /* AnalizeViewController.swift */,
 			);
 			name = SimpleFunctionGUI;
@@ -395,7 +392,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A3452011C96EC9B00AD6C80 /* CompareToBForceViewController.swift in Sources */,
 				7A3452071C96F00000AD6C80 /* BForce.swift in Sources */,
 				7A864BB51C8F404400B73B2D /* Chromosome.swift in Sources */,
 				7A2E51A11C88846100428125 /* GraphViewController.swift in Sources */,

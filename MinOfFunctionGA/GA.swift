@@ -6,13 +6,6 @@
 //  Copyright © 2016 Axel Nowaczyk. All rights reserved.
 //
 
-
-/*
-https://www.youtube.com/watch?v=I2heTejQP58&list=PLea0WJq13cnARQILcbHUPINYLy1lOSmjH
-
-*/
-
-
 import Foundation
 
 protocol GA: CustomStringConvertible{
