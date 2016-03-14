@@ -21,6 +21,7 @@ class BForce {
         return min
     }
 }
+
 class BForceC {
     var min: Double?{
         var min: Double?
