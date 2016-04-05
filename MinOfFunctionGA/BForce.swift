@@ -9,7 +9,7 @@
 import Foundation
 
 class BForce {
-    var min: Double?{
+    static var min: Double?{
         var min: Double?
         let step = 0.01
         for var index = SimpleFunctionChromosome.Numbers.Range.Min;
@@ -23,7 +23,7 @@ class BForce {
 }
 
 class BForceC {
-    var min: Double?{
+    static var min: Double?{
         var min: Double?
         let step = 0.01
         for var index = ComplexFunctionChromosome.Numbers.Range.Min;

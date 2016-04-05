@@ -18,8 +18,6 @@
 		7A5F29C91C873086009F6714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5F29C71C873086009F6714 /* Main.storyboard */; };
 		7A5F29CB1C873086009F6714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A5F29CA1C873086009F6714 /* Assets.xcassets */; };
 		7A5F29CE1C873086009F6714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A5F29CC1C873086009F6714 /* LaunchScreen.storyboard */; };
-		7A5F29D91C873087009F6714 /* MinOfFunctionGATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F29D81C873087009F6714 /* MinOfFunctionGATests.swift */; };
-		7A5F29E41C873087009F6714 /* MinOfFunctionGAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F29E31C873087009F6714 /* MinOfFunctionGAUITests.swift */; };
 		7A5F29F21C878DF9009F6714 /* UserInterfaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5F29F11C878DF9009F6714 /* UserInterfaceViewController.swift */; };
 		7A864BB51C8F404400B73B2D /* Chromosome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A864BB41C8F404400B73B2D /* Chromosome.swift */; };
 		7AAE57CA1C9458E7007F984B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AAE57C31C945841007F984B /* Charts.framework */; };
@@ -85,11 +83,7 @@
 		7A5F29CD1C873086009F6714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A5F29CF1C873086009F6714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A5F29D41C873087009F6714 /* MinOfFunctionGATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinOfFunctionGATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A5F29D81C873087009F6714 /* MinOfFunctionGATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinOfFunctionGATests.swift; sourceTree = "<group>"; };
-		7A5F29DA1C873087009F6714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A5F29DF1C873087009F6714 /* MinOfFunctionGAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinOfFunctionGAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A5F29E31C873087009F6714 /* MinOfFunctionGAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinOfFunctionGAUITests.swift; sourceTree = "<group>"; };
-		7A5F29E51C873087009F6714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A5F29F11C878DF9009F6714 /* UserInterfaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterfaceViewController.swift; sourceTree = "<group>"; };
 		7A864BB41C8F404400B73B2D /* Chromosome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chromosome.swift; sourceTree = "<group>"; };
 		7AAE57BB1C945841007F984B /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/ios-charts-master/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
@@ -155,8 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				7A5F29C21C873086009F6714 /* MinOfFunctionGA */,
-				7A5F29D71C873087009F6714 /* MinOfFunctionGATests */,
-				7A5F29E21C873087009F6714 /* MinOfFunctionGAUITests */,
 				7A5F29C11C873086009F6714 /* Products */,
 				7AAE57BB1C945841007F984B /* Charts.xcodeproj */,
 			);
@@ -183,24 +175,6 @@
 				7A2E519F1C88837C00428125 /* NotImportantFiles */,
 			);
 			path = MinOfFunctionGA;
-			sourceTree = "<group>";
-		};
-		7A5F29D71C873087009F6714 /* MinOfFunctionGATests */ = {
-			isa = PBXGroup;
-			children = (
-				7A5F29D81C873087009F6714 /* MinOfFunctionGATests.swift */,
-				7A5F29DA1C873087009F6714 /* Info.plist */,
-			);
-			path = MinOfFunctionGATests;
-			sourceTree = "<group>";
-		};
-		7A5F29E21C873087009F6714 /* MinOfFunctionGAUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7A5F29E31C873087009F6714 /* MinOfFunctionGAUITests.swift */,
-				7A5F29E51C873087009F6714 /* Info.plist */,
-			);
-			path = MinOfFunctionGAUITests;
 			sourceTree = "<group>";
 		};
 		7A864BB61C8F404F00B73B2D /* Classes */ = {
@@ -409,7 +383,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A5F29D91C873087009F6714 /* MinOfFunctionGATests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A5F29E41C873087009F6714 /* MinOfFunctionGAUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = MinOfFunctionGA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.axlpl.MinOfFunctionGA;
@@ -552,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = MinOfFunctionGA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.axlpl.MinOfFunctionGA;
