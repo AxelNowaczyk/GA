@@ -12,12 +12,13 @@ class BForce {
     static var min: Double?{
         var min: Double?
         let step = 0.01
-        for var index = SimpleFunctionChromosome.Numbers.Range.Min;
-            index<SimpleFunctionChromosome.Numbers.Range.Max;index+=step{
-                if min == nil || min > SimpleFunctionChromosome.fitnessAtPoint(index){
-                    min = SimpleFunctionChromosome.funcValAt(index)
-                }
-        }
+        var index = SimpleFunctionChromosome.Numbers.Range.Min
+        repeat{
+            if min == nil || min > SimpleFunctionChromosome.fitnessAtPoint(index){
+                min = SimpleFunctionChromosome.funcValAt(index)
+            }
+            index+=step
+        } while index < SimpleFunctionChromosome.Numbers.Range.Max
         return min
     }
 }
@@ -26,15 +27,20 @@ class BForceC {
     static var min: Double?{
         var min: Double?
         let step = 0.01
-        for var index = ComplexFunctionChromosome.Numbers.Range.Min;
-            index<ComplexFunctionChromosome.Numbers.Range.Max;index+=step{
-                for var index2 = ComplexFunctionChromosome.Numbers.Range.Min;
-                    index2<ComplexFunctionChromosome.Numbers.Range.Max;index2+=step{
-                        if min == nil || min > ComplexFunctionChromosome.fitnessAtPoint((index,index2)){
-                            min = ComplexFunctionChromosome.fitnessAtPoint((index,index2))
-                        }
+        var index = ComplexFunctionChromosome.Numbers.Range.Min
+        repeat{
+            
+            var index2 = ComplexFunctionChromosome.Numbers.Range.Min
+            repeat{
+                if min == nil || min > ComplexFunctionChromosome.fitnessAtPoint((index,index2)){
+                    min = ComplexFunctionChromosome.fitnessAtPoint((index,index2))
                 }
-        }
+                index2+=step
+            } while index2 < ComplexFunctionChromosome.Numbers.Range.Max
+            
+            index+=step
+        } while index < ComplexFunctionChromosome.Numbers.Range.Max
+        
         return min
     }
 }

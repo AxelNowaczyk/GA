@@ -20,11 +20,12 @@ class GraphViewController: UIViewController {
         var x = [Double]()
         var y = [Double]()
         let step = 0.01
-        for var index = SimpleFunctionChromosome.Numbers.Range.Min;
-            index<SimpleFunctionChromosome.Numbers.Range.Max;index+=step{
-                x.append(index)
-                y.append(SimpleFunctionChromosome.funcValAt(index))
-        }
+        var index = SimpleFunctionChromosome.Numbers.Range.Min
+        repeat{
+            x.append(index)
+            y.append(SimpleFunctionChromosome.funcValAt(index))
+            index+=step
+        } while index<SimpleFunctionChromosome.Numbers.Range.Max
         setChart(x, values: y)
     }
 
